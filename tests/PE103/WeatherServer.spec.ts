@@ -29,7 +29,7 @@ describe('--Pruebas de API del Clima--', () => {
   });
 
   it('Debe retornar un error 404 si la ruta no existe', (done) => {
-    request.get('http://localhost:3000/nonexistingroute', (error, response, body) => {
+    request.get('http://localhost:3000/noruta', (error, response, body) => {
       const result = JSON.parse(body);
       expect(response.statusCode).to.equal(404);
       expect(result).to.be.an('object');
